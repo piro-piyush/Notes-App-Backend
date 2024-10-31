@@ -1,22 +1,28 @@
 // Initialization
-const express = require("express");
+const express = require('express');
 const app = express();
 
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const Note = require('./models/Note');
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 
 mongoose
   .connect(
     "mongodb+srv://piyush:72717272@cluster0.ju8v3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(function () {
+
     // App routes
     app.get("/", function (req, res) {
-      res.send("This is home page");
+      const response = {message: "Congratulations API Works Fine !!"};
+      res.json(response);
     });
 
-    app.get("/", function (req, res) {
-      res.send("This is home page");
-    });
+    const noteRouter = require("./routes/Route");
+    app.use("/notes", noteRouter);
   });
 
 // Starting the server on a PORT
