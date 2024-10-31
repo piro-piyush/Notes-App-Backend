@@ -22,4 +22,5 @@ mongoose
 // Starting the server on a PORT
 app.listen(5000, function () {
   console.log("Server is running at PORT : 5000");
+  console.log("\nClick here to view : http://localhost:5000");
 });
