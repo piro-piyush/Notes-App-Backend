@@ -1,11 +1,10 @@
 // Initialization
-const express = require("express");
+import express from "express";
+import { connect } from "mongoose";
+
 const app = express();
 
-const mongoose = require("mongoose");
-
-mongoose
-  .connect(
+connect(
     "mongodb+srv://piyush:72717272@cluster0.ju8v3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(function () {
