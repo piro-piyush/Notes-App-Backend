@@ -40,7 +40,7 @@ Make sure you have the following installed on your system:
 - [Express](https://www.npmjs.com/package/express)
 - [Mongoose](https://www.npmjs.com/package/mongoose)
 - [Nodemon](https://www.npmjs.com/package/nodemon) (optional but recommended for development)
-- [DotEnv](hhttps://www.npmjs.com/package/dotenv) (optional but recommended for development)
+- [DotEnv](https://www.npmjs.com/package/dotenv) (optional but recommended for development)
 
 ### Installation
 
